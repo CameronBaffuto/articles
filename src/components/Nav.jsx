@@ -32,9 +32,9 @@ export default function Nav() {
         
       </ul>
       <ul class="navbar-nav ms-auto">
-      <span class="navbar-text px-5 mt-2 text-warning">
+      {/* <span class="navbar-text px-5 mt-2 text-warning">
           {currentUser ? <p><img src={currentUser.photoURL} alt="usr" style={{ height: "3vh" }}/> Welcome to InstaCam, {currentUser.email} </p> : <p>Welcome to InstaCam </p>}    
-        </span>
+        </span> */}
         <li class="nav-item">
               <button onClick={() => auth.signOut()} className="btn btn-danger mt-2">Logout <i class="fas fa-sign-out-alt"></i></button>
         </li>
