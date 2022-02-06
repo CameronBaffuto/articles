@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link, Routes, Route, BrowserRouter } from "react-router-dom";
 import AddArticle from './AddArticle';
 import Articles from './Articles';
@@ -6,14 +6,14 @@ import { auth } from "../firebaseConfig";
 
 export default function Nav() {
 
-  const [currentUser, setCurrentUser] = useState();
+  // const [currentUser, setCurrentUser] = useState();
 
-  useEffect(() => {
-        auth.onAuthStateChanged((user) => {
-              setCurrentUser(user);
-              console.log(user);
-        })
-  }, [])
+  // useEffect(() => {
+  //       auth.onAuthStateChanged((user) => {
+  //             setCurrentUser(user);
+  //             console.log(user);
+  //       })
+  // }, [])
 
   return (
 
