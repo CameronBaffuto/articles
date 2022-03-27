@@ -23,7 +23,7 @@ export default function Articles() {
 
   return (
   <div>
-      <div className="m-5">  
+      <div className="m-3">  
     <div className="row">
     {articles.length === 0 ? ( 
             <h1>No Articles</h1> 
