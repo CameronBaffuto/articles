@@ -3,6 +3,7 @@ import  { Timestamp, collection, addDoc } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { storage, db } from '../firebaseConfig';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function AddArticle() {
@@ -57,6 +58,7 @@ export default function AddArticle() {
             .then(() => {
                 toast('Article added successfully', {type: 'success'});
                 setProgress(0); 
+                navigate('/articles');
             })
             .catch((err) => {
                 toast('Error adding article', {type: 'error'});
@@ -64,7 +66,9 @@ export default function AddArticle() {
         })
     }
             );
+            
     }
+    const navigate = useNavigate();
 
   return (
 <div className="container">
