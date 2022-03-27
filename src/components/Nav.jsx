@@ -26,10 +26,9 @@ export default function Nav() {
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
+        {/* <li class="nav-item">
             <Link to="add" className="nav-link"><i class="fas fa-plus-circle"></i> Add New</Link>
-        </li>
-        
+        </li> */}
       </ul>
       <ul class="navbar-nav ms-auto">
       {/* <span class="navbar-text px-5 mt-2 text-warning">

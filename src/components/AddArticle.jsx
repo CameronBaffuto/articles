@@ -3,7 +3,7 @@ import  { Timestamp, collection, addDoc } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { storage, db } from '../firebaseConfig';
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 
 export default function AddArticle() {
@@ -93,6 +93,7 @@ export default function AddArticle() {
 
 
         <button className="form-control btn-primary mt-2" onClick={handleSubmit}>Submit</button>
+        <Link to="/articles" className="btn btn-outline-danger mt-5">Go Back</Link>
   </div>
   </div>
   </div>

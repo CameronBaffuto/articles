@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import { db } from '../firebaseConfig';
 import DeleteArticle from './DeleteArticle';
-import Zoom from 'react-medium-image-zoom'
-import 'react-medium-image-zoom/dist/styles.css'
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
+import { Link } from "react-router-dom";
 
 
 export default function Articles() {
@@ -23,6 +24,9 @@ export default function Articles() {
 
   return (
   <div>
+      <div class="px-5 pt-3">
+            <Link to="/add" className="btn btn-secondary"><i class="fas fa-plus-circle"></i> Add New</Link>
+      </div>
       <div className="m-3">  
     <div className="row">
     {articles.length === 0 ? ( 
